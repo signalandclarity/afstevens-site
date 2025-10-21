@@ -18,26 +18,32 @@
 </header>
 
 <section class="section">
-  <form name="contact" method="POST" data-netlify="true" action="/success.html">
-    <input type="hidden" name="form-name" value="contact">
-    
-    <label>Your name*</label>
+  <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you">
+  <input type="hidden" name="form-name" value="contact">
+  <p class="hidden">
+    <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+  </p>
+  <label>
+    Name*
     <input type="text" name="name" required>
-    
-    <label>Email*</label>
-      <input type="email" name="email" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
-  
-    <label>What are you looking for help with?*</label>
+  </label>
+  <label>
+    Email*
+    <input type="email" name="email" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+  </label>
+  <label>
+    What are you looking for help with?*
     <textarea name="message" rows="5" required></textarea>
-    
-    <button type="submit" class="btn">Send</button>
-  </form>
+  </label>
+  <button type="submit" class="btn">Send</button>
+  <p class="policy-note">By submitting this form, you agree to our <a href="privacy.html">Privacy Policy</a>.  
+  We may contact you in the future with updates about our services (you can opt out anytime).</p>
+</form>
+
 </section>
 
 <footer class="site-footer">
   <p>
-    By submitting this form, you agree to our 
-    <a href="privacy.html">Privacy Policy</a>. We may contact you in the future with updates about our services (you can opt out anytime).<br>
     © AF Stevens · All rights reserved.
   </p>
 </footer>
