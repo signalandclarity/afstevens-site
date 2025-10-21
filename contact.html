@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact — AF Stevens</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <h1>Get In Touch</h1>
+  <p class="lead">Ready to fix what's not converting?</p>
+  <p>
+    Whether you need one of my packaged offers or something custom — fill out the form below and I'll get back to you within 24 hours.<br>
+    Not sure where to start? → <a href="https://signalandclarity.com/offers">Explore my offers first</a>
+  </p>
+</header>
+
+<section class="section">
+  <form name="contact" method="POST" data-netlify="true" action="/success.html">
+    <input type="hidden" name="form-name" value="contact">
+    
+    <label>Your name*</label>
+    <input type="text" name="name" required>
+    
+    <label>Email*</label>
+      <input type="email" name="email" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+  
+    <label>What are you looking for help with?*</label>
+    <textarea name="message" rows="5" required></textarea>
+    
+    <button type="submit" class="btn">Send</button>
+  </form>
+</section>
+
+<footer class="site-footer">
+  <p>
+    By submitting this form, you agree to our 
+    <a href="privacy.html">Privacy Policy</a>. We may contact you in the future with updates about our services (you can opt out anytime).<br>
+    © AF Stevens · All rights reserved.
+  </p>
+</footer>
+
+</body>
+</html>
+

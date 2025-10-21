@@ -1,0 +1,41 @@
+/* === Base Reset === */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #FAF7F3;
+  color: #3A2C1E;
+  font-family: "Inter", Arial, sans-serif;
+  line-height: 1.6;
+  padding: 0 20px;
+}
+
+/* === Typography === */
+h1, h2 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 15px;
+}
+.lead { font-size: 1.2rem; margin-bottom: 20px; }
+
+/* === Sections === */
+.section {
+  margin: 50px 0;
+}
+
+/* === CTA === */
+.cta { text-align: center; margin: 60px 0; }
+.btn {
+  background: #D98E04;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+/* === Footer === */
+.site-footer {
+  margin-top: 60px;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  border-top: 1px solid #E9E3DA;
+  text-align: center;
+}
