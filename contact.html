@@ -1,53 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact — AF Stevens</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get in touch with A F Stevens to discuss conversion copywriting projects, offers, or custom collaborations.">
+
+  <title>Contact — A F Stevens</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+  <nav class="top-nav">
+    <ul>
+      <li><a href="https://signalandclarity.com/offers" target="_blank" rel="noopener noreferrer">Offers</a></li>
+      <li><a href="https://docs.google.com/document/d/1LMBG-ybUBV3NZ2hlUP6nxKRYqAFlamwrJb2DwUrt0rA/edit?tab=t.0" target="_blank" rel="noopener noreferrer">Samples</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+    </ul>
+  </nav>
 
-<header class="site-header">
-  <h1>Get In Touch</h1>
-  <p class="lead">Ready to fix what's not converting?</p>
-  <p>
-    Whether you need one of my packaged offers or something custom — fill out the form below and I'll get back to you within 24 hours.<br>
-    Not sure where to start? → <a href="https://signalandclarity.com/offers">Explore my offers first</a>
-  </p>
-</header>
+<main id="contact-page">
 
-<section class="section">
-  <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you">
-  <input type="hidden" name="form-name" value="contact">
-  <input type="hidden" name="bot-field">
-  <p class="hidden">
-    <label>Don’t fill this out if you're human: <input name="bot-field"></label>
-  </p>
-  <label>
-    Name*
-    <input type="text" name="name" required>
-  </label>
-  <label>
-    Email*
-    <input type="email" name="email" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
-  </label>
-  <label>
-    What are you looking for help with?*
-    <textarea name="message" rows="5" required></textarea>
-  </label>
-  <button type="submit" class="btn">Send</button>
-  <p class="policy-note">By submitting this form, you agree to our <a href="privacy.html">Privacy Policy</a>.  
-  We may contact you in the future with updates about our services (you can opt out anytime).</p>
-</form>
+  <header class="contact-header" style="padding-top:25px;">
+      
+    <h1>Get In Touch</h1>
+    <p class="lead"><strong>Ready to fix what's not converting?</strong></p>
+    <p>
+      Whether you need one of my packaged offers or something custom, fill out the form below and I’ll get back to you within 24 hours.</p>
+      <p>Not sure where to start? → <a href="https://signalandclarity.com/offers" target="_blank" rel="noopener noreferrer"><strong>Explore my offers first</strong></a></p>
+    
+  </header>
 
-</section>
+  <div class="contact-wrapper">
+    <form name="contact" method="POST" data-netlify="true" action="/thank-you">
+      <input type="hidden" name="form-name" value="contact">
+
+      <label>Name*
+        <input type="text" name="name" required>
+      </label>
+
+      <label>Email*
+        <input type="email" name="email" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+      </label>
+
+      <label>What do you need help with?*
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+
+      <button type="submit" class="btn btn-neutral">Send</button>
+
+      <p class="policy-note">
+        By submitting this form, you agree to our <a href="privacy.html">Privacy Policy</a>.
+        We may contact you in the future with updates about our services (you can opt out anytime).
+      </p>
+    </form>
+  </div>
+
+</main>
 
 <footer class="site-footer">
-  <p>
-    © A F Stevens · All rights reserved. · <a href="privacy.html">Privacy Policy</a>
-  </p>
+  <p>© A F Stevens · All rights reserved · <a href="privacy.html">Privacy Policy</a></p>
 </footer>
+
+
 
 </body>
 </html>

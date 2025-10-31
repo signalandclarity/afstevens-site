@@ -1,5 +1,6 @@
 /* === Base Reset === */
 * { margin: 0; padding: 0; box-sizing: border-box; }
+
 body {
   background: #FAF7F3;
   color: #3A2C1E;
@@ -8,20 +9,87 @@ body {
   padding: 0 20px;
 }
 
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 /* === Typography === */
 h1, h2 {
   font-family: "Playfair Display", serif;
   margin-bottom: 15px;
+  color: #3A2C1E;
 }
-.lead { font-size: 1.2rem; margin-bottom: 20px; }
 
-/* === Sections === */
+h2 {
+  text-align: center;
+  margin: 40px 0 20px 0;
+}
+
+/* Subhead (lead paragraph) */
+.lead {
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-top: 10px;
+  margin-bottom: -15px; /* tighter spacing */
+}
+
+
+/* === Layout Containers === */
+.container {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
 .section {
-  margin: 50px 0;
+  margin: 40px 0;
+}
+
+p {
+  text-align: left;
+  margin-bottom: 0.8rem;
+}
+
+/* === Profile Image === */
+.profile-block {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.profile-block img {
+  width: 280px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* === Inline Bullet Lists === */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  text-align: left;
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+}
+
+ul li::before {
+  content: "• ";
+  color: #000000; /* black bullets */
+  font-weight: bold;
+}
+
+ul li {
+  color: #000000;
 }
 
 /* === CTA === */
-.cta { text-align: center; margin: 60px 0; }
+.cta {
+  text-align: center;
+  margin: 60px 0;
+}
+
 .btn {
   background: #D98E04;
   color: white;
@@ -31,55 +99,14 @@ h1, h2 {
   font-weight: 600;
 }
 
-/* === Footer === */
-.site-footer {
-  margin-top: 60px;
-  padding: 20px 0;
-  font-size: 0.9rem;
-  border-top: 1px solid #E9E3DA;
-  text-align: center;
-}
-/* === Contact Form === */
-form {
-  max-width: 500px;
-  margin: 0 auto;
-  background: #fff;
-  padding: 30px;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-label {
+.pick-path {
+  color: #000000;
+  font-weight: 700;
+  text-align: left;
   display: block;
-  font-weight: 600;
-  margin-bottom: 5px;
-  color: #3A2C1E;
+  margin-top: 10px;
 }
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-family: "Inter", sans-serif;
-  font-size: 1rem;
-}
-input:focus, textarea:focus {
-  border-color: #D98E04;
-  outline: none;
-  box-shadow: 0 0 3px rgba(217,142,4,0.4);
-}
-button[type="submit"] {
-  background: #D98E04;
-  color: #fff;
-  border: none;
-  padding: 12px 20px;
-  font-weight: 600;
-  border-radius: 4px;
-  cursor: pointer;
-}
-button[type="submit"]:hover {
-  background: #b67903;
-}
+
 /* === Contact Form === */
 form {
   max-width: 600px;
@@ -139,4 +166,654 @@ form .btn {
 form .btn:hover {
   background: #b87803;
 }
+ul li {
+  margin-bottom: 4px;
+}
+.path {
+  margin-bottom: 25px; /* was 40px — gives more breathing room */
+}
+/* Prevent unwanted bold text carryover */
+.section p {
+  font-weight: 400; /* normal weight */
+}
 
+.path p {
+  font-weight: 400;
+}
+
+.section p strong,
+.section p b {
+  font-weight: 600; /* only manually bolded text stays bold */
+}
+
+/* Normalize bullet list weights globally */
+ul li {
+  font-weight: 400; /* normal weight */
+}
+
+/* Keep only the manually bolded portions bold */
+ul li strong,
+ul li b {
+  font-weight: 600;
+}
+
+/* === Footer Final Fix === */
+footer, .site-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 60px;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+  border-top: 1px solid #E9E3DA;
+  color: #3A2C1E;
+  width: 100%;
+  text-align: center;
+}
+
+.site-footer a {
+  color: #3A2C1E;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* === CONTACT PAGE POLISH === */
+
+/* Match top spacing from hero on index */
+.site-header.container {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+/* Ensure consistent paragraph spacing */
+.container p {
+  max-width: 650px;
+  margin: 0 auto 15px auto;
+  text-align: left;
+}
+
+/* Adjust spacing between lead + next paragraph */
+.site-header .lead {
+  margin-bottom: 15px;
+}
+
+/* Neutral button style for Contact */
+.btn-neutral {
+  background: #5A4E3D; /* warm coffee neutral */
+  color: #FFF;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.btn-neutral:hover {
+  background: #3A2C1E;
+}
+
+/* Add breathing space below button before policy note */
+.policy-note {
+  margin-top: 18px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #3A2C1E;
+  text-align: left;
+}
+
+/* === CONTACT FORM FINAL REFINEMENTS === */
+
+/* Center the entire form block within page width */
+form {
+  max-width: 600px;
+  margin: 0 auto 50px auto; /* center + bottom spacing */
+  text-align: left; /* keep content aligned left inside */
+}
+
+/* Ensure labels are not bold */
+form label {
+  font-weight: 400; /* normal weight */
+  display: block;
+  margin-bottom: 6px;
+  color: #3A2C1E;
+}
+
+/* Button: use neutral tone (not orange) */
+form .btn,
+form .btn-neutral {
+  background: #5A4E3D !important; /* warm coffee neutral */
+  color: #FFF !important;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+form .btn:hover,
+form .btn-neutral:hover {
+  background: #3A2C1E !important;
+}
+
+/* Add breathing room below the button */
+form .btn + .policy-note {
+  margin-top: 20px !important;
+}
+
+/* Keep policy note visually consistent */
+.policy-note {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #3A2C1E;
+  text-align: left;
+}
+
+/* === FINAL CONTACT FORM CENTER FIX === */
+.section.container {
+  display: flex;
+  justify-content: center;
+}
+
+.section.container form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* === CONTACT FORM PERFECT CENTER FIX === */
+.section.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0; /* remove inherited body/container padding */
+}
+
+.section.container form {
+  margin: 0 auto;
+  max-width: 600px;
+  width: 100%;
+  text-align: left;
+  background: #fff;
+  padding: 30px;
+  border: 1px solid #E8E2D9;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+/* ===========================
+   CONTACT PAGE - FORCED CENTER
+   Targets only #contact-section to avoid side effects
+   =========================== */
+
+#contact-section {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Force the form to sit exactly centered with constrained width */
+#contact-section > form {
+  width: 100% !important;
+  max-width: 600px !important;
+  margin: 0 auto !important;
+  text-align: left !important;
+  padding: 30px !important;
+  background: #fff !important;
+  border: 1px solid #E8E2D9 !important;
+  border-radius: 6px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03) !important;
+}
+
+/* Visual debug helper — remove later if needed */
+#contact-section { outline: 2px dashed rgba(0,0,0,0.03) !important; }
+#contact-section > form { outline: 2px solid rgba(0,0,0,0.03) !important; }
+
+/* =============== CONTACT PAGE REBUILD =============== */
+
+#contact-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 0;
+}
+
+/* Header spacing + width consistency */
+.contact-header {
+  text-align: center;
+  max-width: 650px;
+  margin-bottom: 40px;
+}
+
+.contact-header .lead {
+  margin-bottom: 10px;
+}
+
+/* Centered form container */
+.contact-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-wrapper form {
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  border: 1px solid #E8E2D9;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  padding: 30px;
+  text-align: left;
+}
+
+/* Form element styling */
+.contact-wrapper form label {
+  display: block;
+  font-weight: 400;
+  margin-bottom: 6px;
+  color: #3A2C1E;
+}
+
+.contact-wrapper form input,
+.contact-wrapper form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 18px;
+  border: 1px solid #DCD2C4;
+  border-radius: 4px;
+  background: #FAF8F5;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  color: #3A2C1E;
+}
+
+.contact-wrapper form input:focus,
+.contact-wrapper form textarea:focus {
+  border-color: #D98E04;
+  outline: none;
+  background: #FFFDFB;
+}
+
+/* Button + spacing */
+.contact-wrapper form .btn-neutral {
+  background: #5A4E3D;
+  color: #FFF;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.contact-wrapper form .btn-neutral:hover {
+  background: #3A2C1E;
+}
+
+.contact-wrapper form .policy-note {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #3A2C1E;
+}
+
+/* =============== THANK-YOU PAGE STYLING =============== */
+
+#thank-you-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 100px); /* ensures footer stays bottom */
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.thank-wrapper {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.thank-wrapper h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: #3A2C1E;
+  margin-bottom: 15px;
+}
+
+.thank-wrapper p {
+  font-family: "Inter", sans-serif;
+  color: #3A2C1E;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  text-align: left; /* keeps body text left-aligned while section is centered */
+}
+
+.thank-wrapper a {
+  color: #3A2C1E;
+  text-decoration: underline;
+}
+
+.thank-wrapper a:hover {
+  text-decoration: none;
+}
+
+/* Footer consistent with other pages */
+.site-footer {
+  margin-top: 80px;
+}
+
+/* Center only the thank-you confirmation line */
+.thank-you p:first-of-type {
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+/* ===========================
+   Restore normal section layout (fix for Privacy page)
+   Place this at the end of the file to override previous flex rules
+   =========================== */
+
+/* Put .section.container back to normal stacked block behavior */
+.section.container {
+  display: block !important;
+  flex-direction: initial !important;
+  justify-content: initial !important;
+  align-items: initial !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Make sure headings stay centred and sections keep the container width */
+.section.container h2,
+.section.container h1 {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
+}
+
+/* Ensure paragraphs & lists inside container keep the left aligned single-column layout */
+.section.container p,
+.section.container ul,
+.section.container ol {
+  max-width: 700px;
+  margin: 0 auto 16px auto;
+  text-align: left;
+  line-height: 1.6;
+}
+
+/* Tidy bullet styling for long lists */
+.section.container ul {
+  padding-left: 1.1rem;
+  list-style-position: outside;
+}
+
+.section.container ul li {
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+
+/* Contact page centering remains targeted to the contact wrapper (no global .section.container changes) */
+#contact-page,
+.contact-wrapper,
+#contact-section {
+  /* no-op here — contact page uses its own scoped CSS earlier */
+}
+
+/* === Privacy Page Alignment === */
+header.site-header.container {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+header.site-header.container p.lead {
+  font-size: 1.2rem;
+  max-width: 650px;
+  margin: 0 auto 20px auto;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.section.container p,
+.section.container ul {
+  max-width: 650px;
+  margin: 0 auto 15px auto;
+  text-align: left;
+}
+
+/* === Privacy Page Intro Paragraph === */
+.intro {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 20px auto;
+  line-height: 1.6;
+}
+
+/* === Privacy Page Intro Paragraph === */
+.intro {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 20px auto;
+  line-height: 1.6;
+}
+
+/* =========================
+   Privacy Page - final layout guarantees
+   Place at the end of your style.css
+   ========================= */
+
+/* make sure .container behavior is normal block flow */
+.section.container {
+  display: block !important;
+  width: 100% !important;
+  margin: 40px auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* limit readable width for paragraphs & lists */
+.section.container p,
+.section.container ul,
+.section.container ol {
+  max-width: 680px;
+  margin: 0 auto 18px auto;
+  text-align: left;
+  line-height: 1.6;
+}
+
+/* keep h2 centered in the container */
+.section.container h2 {
+  text-align: center;
+  margin: 28px auto 16px auto;
+  max-width: 700px;
+}
+
+/* intro paragraph under lead — visually centred */
+.intro {
+  text-align: center;
+  margin: 0 auto 22px auto;
+  max-width: 720px;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #3A2C1E;
+}
+
+/* bullet list visual polish inside container */
+.section.container ul {
+  padding-left: 1.1rem;
+  list-style-position: outside;
+}
+
+.section.container ul li {
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+/* safety: ensure contact/footer unaffected */
+.site-footer {
+  margin-top: 60px;
+  text-align: center;
+}
+
+/* === Global Hero Top Spacing Alignment === */
+.site-header.container {
+  margin-top: 60px; /* standardizes top offset for all pages */
+  margin-bottom: 20px;
+}
+
+body.home .site-header.container {
+  margin-top: 60px; /* same for Index */
+}
+/* === GLOBAL LAYOUT ALIGNMENT CLEANUP === */
+
+/* HERO spacing - same for every page */
+.hero,
+.site-header.container {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Footer baseline — identical everywhere */
+.site-footer {
+  width: 100%;
+  margin-top: 60px;
+  padding: 20px 0;
+  border-top: 1px solid #E9E3DA;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #3A2C1E;
+  background: transparent;
+  line-height: 1.5;
+}
+
+.site-footer a {
+  color: #3A2C1E;
+  text-decoration: none;
+}
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* === Minimal Top Navigation (Definitive) === */
+.top-nav {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 0 4px 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+/* Scope the UL so global ul rules don't win */
+.top-nav ul {
+  list-style: none !important;   /* force remove bullets */
+  margin: 0;
+  padding: 0 18px 0 8px !important; /* left padding creates space before first item */
+  display: flex;
+  align-items: center;
+  gap: 0;                         /* we use the slash as separator, so no flex gap */
+}
+
+/* each item */
+.top-nav li {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #3A2C1E;
+  display: inline-block;
+  margin-left: 6px;               /* small consistent spacing before each item */
+}
+
+/* add a clean " / " separator between items — single space both sides */
+.top-nav li + li::before {
+  content: " / ";
+  color: #3A2C1E;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 0;
+}
+
+/* links */
+.top-nav a {
+  color: #3A2C1E;
+  text-decoration: none;
+}
+
+.top-nav a:hover {
+  text-decoration: underline;
+}
+
+/* mobile alignment */
+@media (max-width: 700px) {
+  .top-nav {
+    justify-content: center;
+    padding: 12px 0;
+  }
+  .top-nav ul { padding-left: 6px !important; }
+  .top-nav li { margin-left: 4px; font-size: 0.8rem; }
+}
+/* === NAV BULLET CLEANUP === */
+.top-nav ul li::before {
+  content: none !important;
+}
+/* === Responsive Nav Adjustments === */
+@media (max-width: 768px) {
+  .top-nav {
+    justify-content: center;
+    padding: 12px 0;
+  }
+
+  .top-nav ul {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .top-nav a {
+    font-size: 0.9rem;
+    padding: 2px 6px;
+  }
+}
+
+/* Force the explore link to always show an underline (highest priority) */
+.fixed-underline,
+a.fixed-underline {
+  text-decoration: underline !important;
+  text-underline-offset: 2px; /* optional small visual tweak */
+}
+
+/* make sure hover doesn't remove it */
+.fixed-underline:hover,
+a.fixed-underline:hover {
+  text-decoration: underline !important;
+}
