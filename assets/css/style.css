@@ -859,3 +859,17 @@ a.action-link {
 a.action-link:hover {
   text-decoration-thickness: 2px;
 }
+
+
+/* === Action Link Hover Refinement === */
+a.action-link {
+  display: inline-block;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+a.action-link:hover {
+  opacity: 0.72;
+  transform: translateX(2px);
+  text-decoration: underline;
+  text-decoration-thickness: auto;
+}
