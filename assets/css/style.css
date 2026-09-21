@@ -846,3 +846,16 @@ a.fixed-underline:hover {
   text-decoration: underline;
   text-underline-offset: 2px;
 }
+
+
+/* === 2026 Action Links === */
+a.action-link {
+  color: #3A2C1E;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}
+
+a.action-link:hover {
+  text-decoration-thickness: 2px;
+}
