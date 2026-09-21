@@ -873,3 +873,14 @@ a.action-link:hover {
   text-decoration: underline;
   text-decoration-thickness: auto;
 }
+
+
+/* === Action Links: underline only on hover === */
+a.action-link {
+  text-decoration: none !important;
+}
+
+a.action-link:hover {
+  text-decoration: underline !important;
+  text-underline-offset: 2px;
+}
